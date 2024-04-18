@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "echoing_end",
+	"version": "${version}",
+	"name": "Echoing End",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/echoing_end/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.akisephila.echoing_end.EchoingEnd"
+		],
+		"client": [
+			"com.akisephila.echoing_end.EchoingEndClient"
+		],
+		"fabric-datagen": [
+			"com.akisephila.echoing_end.EchoingEndDataGenerator"
+		]
+	},
+	"mixins": [
+		"echoing_end.mixins.json",
+		{
+			"config": "echoing_end.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
